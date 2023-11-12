@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio - Omar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="1.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Front-End Developer</p>
+                <h1>Hi, I'm <span>Khalil "Omar" Bonilla</span><br> From Florida</h1>
+            </div>
+        </div>
+    </div>
+    <!-------------About Section------------------------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="ProPic.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>As a software developer at Tech Elevator, I apply my skills and knowledge in various programming languages, frameworks, and tools to create software applications that meet the needs and expectations of clients and users. With over three years of experience in the software industry, I have developed a wide range of competencies in coding, debugging, troubleshooting, and documenting software applications, as well as designing and managing databases.
+
+                        My software development career is complemented by my military background, where I served as a turbine mechanic for over eight years. During this time, I gained valuable experience in gas turbine maintenance, mechanical operations, and training. I also developed a strong work ethic, adaptability, and problem-solving skills that have been instrumental in my transition to the civilian sector. My passion for learning and sharing knowledge has motivated me to pursue a certificate in full-stack development from Tech Elevator, as well as an associate degree in computer science from Cuyahoga Community College. My goal is to continue growing as a software developer and leverage my unique combination of skills and expertise to create innovative and impactful solutions.</p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>HTML/CSS/JavaScript</span><br>Front-End Development</li>
+                                <li><span>C#</span><br>Back-End Development</li>
+                                <li><span>Python</span><br>Back-End Development</li>
+                                <li><span>SQL</span><br>Database Development</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2023</span><br>Full-Stack Development at Tech Elevator</li>
+                                <li><span>2022</span><br>Computer Science degree Cuyahoga Community College</li>
+                                <li><span>2020</span><br>Associate of Arts Eastern Florida State</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2023</span><br>Full-Stack Development @ Tech Elevator</li>
+                                <li><span>2021-22</span><br>Lead Maintenance Tech @ Crown Holdings</li>
+                                <li><span>2013-2018</span><br>U S Navy</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-----------------Services-------------------------------------->
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <h2></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--------------------Contact---------------------------------------->
+    
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-square-arrow-up-right"></i> Khabotech@gmail.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i> (321)272-8470</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/khaomarbonilla/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/KOBonilla"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://twitter.com/KhaBoTech"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                <a href="" class="btn">Download Resume</a>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link")
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+</body>
+</html>
